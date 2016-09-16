@@ -41,7 +41,7 @@
                           <span class="sr-only">Toggle navigation</span>
                           Menu <i class="fa fa-bars"></i>
                       </button>
-                      <a class="navbar-brand navtext" href="index.html">Rosemarie Simard</a>
+                      <a class="navbar-brand navtext" href="{% url 'post_list' %}">Rosemarie Simard</a>
                   </div>
 
                   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,7 +54,7 @@
                               <a href="about.html">About</a>
                           </li>
                           <li>
-                              <a href="contact.html">Contact</a>
+                              <a href="{% url 'post_new' %}">Post</a>
                           </li>
                       </ul>
                   </div>
@@ -83,7 +83,7 @@
                       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                           <ul class="list-inline text-center">
                               <li>
-                                  <a href="#">
+                                  <a href="">
                                       <span class="fa-stack fa-lg">
                                           <i class="fa fa-circle fa-stack-2x"></i>
                                           <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -91,7 +91,7 @@
                                   </a>
                               </li>
                               <li>
-                                  <a href="#">
+                                  <a href="https://www.facebook.com/rosemarie.simard.3?ref=br_rs">
                                       <span class="fa-stack fa-lg">
                                           <i class="fa fa-circle fa-stack-2x"></i>
                                           <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -99,7 +99,7 @@
                                   </a>
                               </li>
                               <li>
-                                  <a href="#">
+                                  <a href="https://github.com/gsimore">
                                       <span class="fa-stack fa-lg">
                                           <i class="fa fa-circle fa-stack-2x"></i>
                                           <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -113,17 +113,13 @@
               </div>
           </footer>
 
-      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="/static/vendor/jquery/jquery.min.js"></script>
 
       <!-- Bootstrap Core JavaScript -->
-      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-      <!-- Contact Form JavaScript -->
-      <script src="js/jqBootstrapValidation.js"></script>
-      <script src="js/contact_me.js"></script>
+      <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
 
       <!-- Theme JavaScript -->
-      <script src="js/clean-blog.min.js"></script>
+      <script src="/static/js/clean-blog.min.js"></script>
 
     </body>
 </html>

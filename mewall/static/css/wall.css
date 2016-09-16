@@ -16,6 +16,15 @@ body {
   font-size: 0.5em;
 }
 
-#footer {
-  height: 10%;
+.post-buttons {
+
+}
+
+.form-text {
+
+}
+
+.form-description {
+    width: 40%;
+    height: 20%;
 }
