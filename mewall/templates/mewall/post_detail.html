@@ -1,18 +1,41 @@
 {% extends 'mewall/head.html' %}
 
-{% block content %}
-    <div class="post">
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
+{% block header %}
+<header class="intro-header" style="background-image: url('/static/img/white-rose.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>{{ post.title }}</h1>
+                    <span class="meta">Posted by {{ post.name }}</span>
+                </div>
             </div>
-        {% endif %}
-
-        {% if user.is_authenticated %}
-        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-        {% endif %}
-
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+        </div>
     </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post">
+                  {% if post.published_date %}
+                      <div class="date">
+                          {{ post.published_date }}
+                      </div>
+                  {% endif %}
+
+                  {% if user.is_authenticated %}
+                  <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+                  {% endif %}
+
+                  <p>{{ post.text|linebreaksbr }}</p>
+              </div>
+            </div>
+        </div>
+    </div>
+</article>
+
 {% endblock %}
