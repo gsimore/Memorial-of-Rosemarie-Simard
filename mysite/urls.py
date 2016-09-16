@@ -19,7 +19,6 @@ from django.conf.urls import url, include
 from mewall import views
 
 urlpatterns = [
-    url(r'^$', views.home, name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'', include('mewall.urls')),
 ]

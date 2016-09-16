@@ -1,4 +1,29 @@
 <html>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+        <title>In Loving Memory of Rosemarie Simard</title>
+    </head>
+
+    <body>
+
+
+        <div>
+        {% for post in posts %}
+            <div>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <div> {{ post.name }} </div>
+                <div>published: {{ post.published_date }}</div>
+                <div>{{ post.text|linebreaksbr }}</div>
+            </div>
+        {% endfor %}
+      </div>
+
+        <p>Love!</p>
+        <p>It works!</p>
+
+
+    </body>
 </html>
