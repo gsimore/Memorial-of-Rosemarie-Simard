@@ -17,6 +17,7 @@
 {% block content %}
     <form method="POST" class="post-form">{% csrf_token %}
       <div class="container">
+        {{ form.errors }}
         {{ form.non_field_errors }}
           <div class="row">
               <div class="col-sm-6">
@@ -37,12 +38,6 @@
               </div>
           </div>
       </div>
-    </form>
-
-
-    <form method="POST" class="post-form">{% csrf_token %}
-        <div class="container">
-
 
   {% if post.has_image == True %}
           <div class="row">
@@ -65,7 +60,7 @@
               </div>
           </div>
 
-      </div>
         <button type="submit" class="save btn btn-default">Save</button>
+      </div>
     </form>
 {% endblock %}

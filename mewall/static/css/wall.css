@@ -24,16 +24,16 @@ body {
 
 }
 
-.form-description {
-    width: 76%;
-    height: 20%;
-}
 
 .form-text {
   width: 51.5%;
-  height: 20%;
+  height: 50%;
 }
 
 .django-error {
   color: #CA3036;
+}
+
+.custom-subheading {
+  color: #334424;
 }
