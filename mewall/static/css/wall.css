@@ -4,7 +4,7 @@ h1 a {
 }
 
 body {
-
+    overflow-x: hidden:
 }
 
 .navtext {
@@ -25,6 +25,15 @@ body {
 }
 
 .form-description {
-    width: 40%;
+    width: 76%;
     height: 20%;
+}
+
+.form-text {
+  width: 51.5%;
+  height: 20%;
+}
+
+.django-error {
+  color: #CA3036;
 }

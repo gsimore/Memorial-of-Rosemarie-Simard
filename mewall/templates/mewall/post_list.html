@@ -28,24 +28,32 @@
 
       {% for post in posts %}
 
+      <div class="row">
+
       {% if post.has_image == True %}
-          <div id="post" class="post">
-              <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-              <div> {{ post.name }} </div>
-              <div> {{ post.image }} </div>
-              <div> published: {{ post.published_date }}</div>
-              <div> {{ post.text|linebreaksbr }}</div>
+          <div class="col-md-6">
+              <div id="post" class="post">
+                  <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                  <div> {{ post.name }} </div>
+                  <img src="{{ post.image.url }}" alt="">
+                  <div> {{ post.description|linebreaksbr }}</div>
+                  <div> published: {{ post.published_date }}</div>
+              </div>
           </div>
 
       {% elif post.has_image == False %}
-          <div id="post" class="post">
-              <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-              <div> {{ post.name }} </div>
-              <div> published: {{ post.published_date }}</div>
-              <div> {{ post.text|linebreaksbr }}</div>
+          <div class="col-md-6">
+              <div id="post" class="post">
+                  <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                  <div> {{ post.name }} </div>
+                  <div> {{ post.text|linebreaksbr }}</div>
+                  <div> published: {{ post.published_date }}</div>
+              </div>
           </div>
 
       {% endif %}
+
+      </div>
 
       {% endfor %}
 

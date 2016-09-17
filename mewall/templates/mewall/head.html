@@ -1,5 +1,6 @@
 {% load staticfiles %}
 
+<!DOCTYPE html>
 <html>
     <head>
 
@@ -51,7 +52,7 @@
                               <a href="{% url 'post_list' %}">Home</a>
                           </li>
                           <li>
-                              <a href="about.html">About</a>
+                              <a href="{% url 'about' %}">About</a>
                           </li>
                           <li>
                               <a href="{% url 'post_new' %}">Post</a>

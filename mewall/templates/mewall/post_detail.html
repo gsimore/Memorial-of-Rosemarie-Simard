@@ -1,6 +1,7 @@
 {% extends 'mewall/head.html' %}
 
 {% block header %}
+
 <header class="intro-header" style="background-image: url('/static/img/white-rose.jpg')">
     <div class="container">
         <div class="row">
@@ -13,9 +14,11 @@
         </div>
     </div>
 </header>
+
 {% endblock %}
 
 {% block content %}
+
 <article>
     <div class="container">
         <div class="row">
@@ -24,6 +27,13 @@
                   {% if post.published_date %}
                       <div class="date">
                           {{ post.published_date }}
+                      </div>
+                  {% endif %}
+
+                  {% if post.has_image == True %}
+                      <div class="image-post">
+                          <img src="{{ post.image.url }}">
+                          {{ post.description }}
                       </div>
                   {% endif %}
 
