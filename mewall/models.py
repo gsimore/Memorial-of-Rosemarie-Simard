@@ -9,7 +9,6 @@ class Post(models.Model):
     text = models.TextField(blank=True, null=True)
     image = models.ImageField(blank=True, null=True,)
     has_image = models.BooleanField(default=False)
-    description = models.TextField(blank=True, null=True)
     published_date = models.DateTimeField(default=timezone.now)
 
     def publish(self):

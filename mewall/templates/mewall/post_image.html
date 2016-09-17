@@ -42,6 +42,12 @@
               {{ form.name }}
             </div>
         </div>
+        <div class="row">
+            <div class="col-sm-6"> Your words:</div> <div class="col-sm-6">
+              {{ form.text.errors }}
+              {{ form.text }}
+            </div>
+        </div>
     </div>
         <button type="submit" class="save btn btn-default">Save</button>
     </form>

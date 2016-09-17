@@ -36,7 +36,6 @@
                   <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
                   <div> {{ post.name }} </div>
                   <img src="{{ post.image.url }}" alt="">
-                  <div> {{ post.description|linebreaksbr }}</div>
                   <div> published: {{ post.published_date }}</div>
               </div>
           </div>

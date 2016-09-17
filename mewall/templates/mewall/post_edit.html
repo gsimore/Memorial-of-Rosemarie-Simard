@@ -56,23 +56,14 @@
               </div>
           </div>
 
-          <div class="row">
-              <div class="col-sm-12">
-                  <div class="django-error">{{ form.description.errors }}</div>
-                  {{ form.description }}
-              </div>
-          </div>
   {% endif %}
 
-  {% if post.has_image == False %}
           <div class="row">
               <div class="col-sm-6"> Your words:</div> <div class="col-sm-6">
                 {{ form.text.errors }}
                 {{ form.text }}
               </div>
           </div>
-  {% endif %}
-
 
       </div>
         <button type="submit" class="save btn btn-default">Save</button>

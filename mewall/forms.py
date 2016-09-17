@@ -5,10 +5,9 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'text', 'name', 'image', 'description', 'has_image')
+        fields = ('title', 'text', 'name', 'image', 'has_image')
         widgets = {
             'text': forms.TextInput(attrs={'placeholder': 'Tell your stories, memories and prayers here.', 'class': 'form-text'}),
-            'description': forms.TextInput(attrs={'placeholder': 'Write a brief description of your image.', 'class': 'form-description'}),
         }
 
     def __init__(self, *args, **kwargs):
