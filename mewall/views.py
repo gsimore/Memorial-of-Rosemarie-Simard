@@ -21,16 +21,24 @@ def post_detail(request, pk):
 
 
 def post_new(request):
-    if request.method == "POST":
-        form = PostForm(request.POST)
+    if request.method == "POST":  # as a POST dict
+        # we know the user hit 'submit'
+        # alternative to using: if request.method == 'POST':
+        # can just use form = PostForm(data=request.POST or None)
+        form = PostForm(data=request.POST)
+        # check validation
         if form.is_valid():
-            post = form.save(commit=False)
-            post.published_date = timezone.now()
-            post.save()
+            # if the user submitted the form and the form is valid
+            post = form.save(commit=False)        # create new instance of PostForm
+            post.published_date = timezone.now()  # manually create the published date and time
+            post.save()                           # save PostForm instance
+            # redirect to a page to display a completed form
             return redirect('post_detail', pk=post.pk)
-    else:
+    else:  # elif method == 'Get':
         form = PostForm()
-    return render(request, 'mewall/post_edit.html', {'form': form})
+
+    context = {'form': form}
+    return render(request, 'mewall/post_edit.html', context)
 
 
 def post_image(request):
